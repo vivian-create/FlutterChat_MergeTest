@@ -1,7 +1,7 @@
+import 'package:chatapp/views/register/register_acount_body.dart';
+import 'package:chatapp/views/register/register_acount_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:chatapp/utils/logger.dart';
-import 'package:chatapp/views/register/register_account_controller.dart';
-import 'package:chatapp/views/register/register_account_body.dart';
 import 'package:get/get.dart';
 
 class RegisterAccountPage extends GetView<RegisterAccountController> {

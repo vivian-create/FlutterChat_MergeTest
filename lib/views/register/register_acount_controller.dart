@@ -56,8 +56,9 @@ class RegisterAccountController extends GetxController {
             emailEditingController.text);
 
         /// 成功輸入 -> 成功登入，跳轉到ChatRoom頁面。
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => ChatRoom()));
+        Get.to(ChatRoom());
+        /*Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => ChatRoom()));*/
       }
     });
   }

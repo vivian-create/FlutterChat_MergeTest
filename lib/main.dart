@@ -3,6 +3,7 @@ import 'package:chatapp/helper/helperfunctions.dart';
 import 'package:chatapp/views/chatrooms.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() async {
   ///初始化Flutter Firebase
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     ///登入及註冊的UI介面設計
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'FlutterChat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

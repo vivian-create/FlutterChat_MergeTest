@@ -3,9 +3,10 @@ import 'package:chatapp/helper/theme.dart';
 import 'package:chatapp/services/auth.dart';
 import 'package:chatapp/services/database.dart';
 import 'package:chatapp/views/chatrooms.dart';
+import 'package:chatapp/views/register/register_acount_controller.dart';
 import 'package:chatapp/widget/widget.dart';
 import 'package:flutter/material.dart';
-import 'package:chatapp/views/register/register_acount_controller';
+import 'package:get/get.dart';
 /*lass SignUp extends StatefulWidget {*/
 /// 在SignUp調用_toggleview() 這個func.
 ///  (輸入密碼時不顯示文字，並以●●●●●●●●取代)
@@ -70,6 +71,8 @@ import 'package:chatapp/views/register/register_acount_controller';
     }
   }*/
 class RegisterAccountBody extends GetView<RegisterAccountController> {
+  get formKey => null;
+
   /// 註冊UI介面
   @override
   Widget build(BuildContext context) {
@@ -180,7 +183,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          widget.toggleView();
+                          toggleView();
                         },
                         child: Text(
                           "SignIn now",
