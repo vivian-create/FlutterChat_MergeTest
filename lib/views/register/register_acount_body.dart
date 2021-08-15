@@ -105,7 +105,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                           decoration: textFieldInputDecoration("username"),
                         ),
                         TextFormField(
-                          controller: emailEditingController,
+                          controller: controller.emailEditingController,
                           style: simpleTextStyle(),
                           validator: (val) {
                             return RegExp(
@@ -120,7 +120,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                           obscureText: true,
                           style: simpleTextStyle(),
                           decoration: textFieldInputDecoration("password"),
-                          controller: passwordEditingController,
+                          controller: controller.passwordEditingController,
                           validator: (val) {
                             return val.length < 6
                                 ? "Enter Password 6+ characters"
@@ -135,7 +135,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      singUp();
+                      controller.singUp();
                     },
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: 16),
@@ -183,7 +183,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          toggleView();
+                          controller.toggleView();
                         },
                         child: Text(
                           "SignIn now",
