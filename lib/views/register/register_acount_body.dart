@@ -76,7 +76,6 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
   /// 註冊UI介面
   @override
   Widget build(BuildContext context) {
-    var controller;
     return Scaffold(
       appBar: appBarMain(context),
       body: controller.isLoading
@@ -96,7 +95,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                       children: [
                         TextFormField(
                           style: simpleTextStyle(),
-                          controller: controller.usernameEditingController,
+                          controller: usernameEditingController,
                           validator: (val) {
                             return val.isEmpty || val.length < 3
                                 ? "Enter Username 3+ characters"
@@ -105,7 +104,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                           decoration: textFieldInputDecoration("username"),
                         ),
                         TextFormField(
-                          controller: controller.emailEditingController,
+                          controller: emailEditingController,
                           style: simpleTextStyle(),
                           validator: (val) {
                             return RegExp(
@@ -120,7 +119,7 @@ class RegisterAccountBody extends GetView<RegisterAccountController> {
                           obscureText: true,
                           style: simpleTextStyle(),
                           decoration: textFieldInputDecoration("password"),
-                          controller: controller.passwordEditingController,
+                          controller: passwordEditingController,
                           validator: (val) {
                             return val.length < 6
                                 ? "Enter Password 6+ characters"
